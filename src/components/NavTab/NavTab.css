@@ -1,0 +1,50 @@
+.nav__menu {
+  margin: 151px auto 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav__button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  background-color: #303030;
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px 17px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: .1s ease;
+  width: 96px;
+}
+
+.nav__button:hover {
+  opacity: 50%;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .nav__menu{
+    margin-top: 314px;
+  }
+}
+@media (max-width: 400px) {
+  .nav__menu {
+    gap: 6px;
+    margin-top: 200px;
+  }
+  .nav__button {
+    width: 82px;
+    padding: 5px 15px;
+    font-size: 10px;
+  }
+}
+

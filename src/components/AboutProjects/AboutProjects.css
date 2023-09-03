@@ -1,0 +1,205 @@
+.about-projects {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px 0;
+  height: 608px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-projects__header {
+  text-align: left;
+  font-size: 22px;
+  max-width: 1140px;
+  width: 100%;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  margin: 110px auto 0;
+  padding: 0 0 23px 0;
+  border-bottom: 1px solid #DADADA;
+  ;
+}
+
+.about-projects__table {
+  margin: 70px auto 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.about-projects__table-header {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  text-align: left;
+  max-width: 550px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-projects__table-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  max-width: 550px;
+  margin: 26px 0 0 0;
+  padding: 0;
+}
+
+.about-projects__interval {
+  margin: 110px auto 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.about-projects__interval-time {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-projects__interval-period {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 9px 0;
+}
+
+.about-projects__interval-period_backend {
+  color: #000;
+  background-color: #3DDC84;
+  max-width: 228px;
+  width: 100%;
+}
+
+.about-projects__interval-period_frontend {
+  background-color: #303030;
+  max-width: 912px;
+  width: 100%;
+}
+
+.about-projects__interval-development {
+  display: flex;
+  flex-direction: row;
+  margin: 14px 0 0 0;
+}
+
+.about-projects__interval-mode {
+  color: #8B8B8B;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-projects__interval-mode_backend {
+  max-width: 228px;
+  width: 100%;
+}
+
+.about-projects__interval-mode_frontend {
+  max-width: 912px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .about-projects {
+    height: 585px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .about-projects__header {
+    max-width: 668px;
+    margin-top: 90px;
+  }
+
+  .about-projects__table {
+    max-width: 668px;
+  }
+
+  .about-projects__table-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .about-projects__interval {
+    max-width: 668px;
+    margin-top: 93px;
+  }
+
+  .about-projects__interval-period_backend {
+    max-width: 140px;
+  }
+
+  .about-projects__interval-mode_backend {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-projects {
+    height: 641px;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .about-projects__header {
+    font-size: 18px;
+    margin-top: 70px;
+    padding-bottom: 28px;
+  }
+
+  .about-projects__table {
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 51px;
+  }
+
+  .about-projects__table-text {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 16px;
+  }
+
+  .about-projects__interval {
+    margin-top: 60px;
+  }
+
+  .about-projects__interval-development {
+    margin-top: 10px;
+  }
+
+  .about-projects__interval-mode {
+    font-size: 11px;
+  }
+
+  .about-projects__interval-period {
+    font-size: 11px;
+  }
+
+  .about-projects__interval-period_backend {
+    max-width: 100px;
+  }
+
+  .about-projects__interval-mode_backend {
+    max-width: 100px;
+  }
+
+  .about-projects__interval-mode_frontend {
+    max-width: 184px;
+  }
+}

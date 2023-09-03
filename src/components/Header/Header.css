@@ -1,0 +1,120 @@
+.header {
+  max-width: 1280px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 70px 0;
+}
+
+.header__logo {
+  border: none;
+  background-color: #202020;
+  cursor: pointer;
+  transition: .1s ease;
+  margin: 0;
+  padding: 0;
+  background: url(../../images/header__logo.svg) center no-repeat;
+  width: 38px;
+  height: 38px;
+}
+.header__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.header__register-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.21;
+  transition: .1s ease;
+  padding: 0;
+}
+
+.header__login-link {
+  background-color: #3DDC84;
+  border: none;
+  border-radius: 3px;
+  transition: .1s ease;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.21;
+  padding: 8px 20px;
+}
+
+.header__button-link:hover,
+.header__logo:hover,
+.header__register-link:hover,
+.header__menu-link:hover,
+.header__menu-button:hover {
+  opacity: 60%;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 16px;
+  margin: 0 auto;
+  width: 212px;
+}
+
+.header__menu-link {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 18px;
+  transition: .1s ease;
+  cursor: pointer;
+}
+
+.header__menu-button {
+  border: none;
+  border-radius: 20px;
+  background-color: #313131;
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0;
+  padding: 8px 0;
+  width: 100px;
+  cursor: pointer;
+  transition: .1s ease;
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+  .header{
+    max-width: 768px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__menu-button{
+    display: none;
+  }
+}
+@media (max-width:400px) {
+  .header{
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  .header__links {
+    gap:14px
+  }
+  .header__register-link {
+    font-size: 10px;
+  }
+  .header__login-link {
+    padding: 5px 12px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+}

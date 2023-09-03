@@ -1,0 +1,130 @@
+.movie {
+  width: 360px;
+  min-height: 231px;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 201px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.movie__button {
+  cursor: pointer;
+  transition: visibility 0s, transform .1s;
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  right: 14px;
+  transform: translateX(200%);
+}
+
+.movie:hover .movie__button {
+  transform: translateX(0);
+}
+
+.movie__button:hover {
+  opacity: 70%;
+}
+
+.movie__button_inactive {
+  color: #FFF;
+  text-align: center;
+  font-size: 10px;
+  line-height: 9px;
+  border: none;
+  border-radius: 30px;
+  background: #313131;
+  padding: 6px 0;
+  width: 72px;
+}
+
+.movie__button_active {
+  background: url(../../images/save-button.svg) no-repeat center;
+  border: none;
+  width: 21px;
+  height: 21px;
+}
+.movie__button_active-cross{
+  background: url(../../images/cross__button.svg) no-repeat center;
+  border: none;
+  width: 21px;
+  height: 21px;
+}
+
+.movie__caption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 0;
+  padding: 0 14px 0;
+  max-width: 360px;
+}
+
+.movie__title {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  font-weight: 400;
+  font-size: 13px;
+  width: 200px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.movie__dutarion {
+  color: #8B8B8B;
+  text-align: center;
+  font-size: 11px;
+  line-height: 10px;
+  border-radius: 3px;
+  background: #2F2F2F;
+  width: 52px;
+  margin: 0;
+  padding: 3px 0;
+}
+
+@media (max-width:890px) {
+  .movie {
+    width: 339px;
+  }
+
+  .movie__image {
+    height: 190px;
+  }
+
+  .movie__caption {
+    margin-top: 22px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width:400px) {
+  .movie {
+    width: 300px;
+    min-height: 200px;
+  }
+
+  .movie__image {
+    height: 168px;
+  }
+
+  .movie__caption {
+    margin-top: 12px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .movie__title {
+    font-size: 12px;
+  }
+}
