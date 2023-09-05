@@ -7,19 +7,19 @@ function Portfolio() {
         <li className="portfolio__list-item">
           <a className="portfolio__link" href="https://mxtheen.github.io/how-to-learn/" target='_blank' rel="noreferrer">
             <p className='portfolio__link-text'>Статичный сайт</p>
-            <img src={arrow} alt='Переход на страницу'></img>
+            <img src={arrow} alt='Переход на страницу' className="portfolio__link-image"></img>
           </a>
         </li>
         <li className="portfolio__list-item">
           <a className="portfolio__link" href="https://mxtheen.github.io/russian-travel/" target='_blank' rel="noreferrer">
             <p className='portfolio__link-text'>Адаптивный сайт</p>
-            <img src={arrow} alt='Переход на страницу'></img>
+            <img src={arrow} alt='Переход на страницу' className="portfolio__link-image"></img>
           </a>
         </li>
         <li className="portfolio__list-item">
           <a className="portfolio__link" href="https://mxtheen.github.io/react-mesto-auth/" target='_blank' rel="noreferrer">
             <p className='portfolio__link-text'>Одностраничное приложение</p>
-            <img src={arrow} alt='Переход на страницу'></img>
+            <img src={arrow} alt='Переход на страницу' className="portfolio__link-image"></img>
           </a>
         </li>
       </ul>

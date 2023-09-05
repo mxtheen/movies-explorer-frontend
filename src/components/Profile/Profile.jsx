@@ -1,5 +1,12 @@
 import Header from "../Header/Header";
+import React from "react";
 function Profile({ isLoggedIn }) {
+  const [isActive, setIsActive] = React.useState(false)
+
+  const handleActive = () => {
+    setIsActive(true)
+  }
+
   return (
     <>
       <Header isLoggedIn={isLoggedIn}></Header>
@@ -15,8 +22,18 @@ function Profile({ isLoggedIn }) {
             <input className="profile__form-input" id="email" placeholder="example@yandex.ru"></input>
           </div>
           <span className="profile__error"></span>
-          <button className="profile__form-btn profile__form-btn_edit">Редактировать</button>
-          <button className="profile__form-btn profile__form-btn_exit">Выйти из аккаунта</button>
+          {
+            isActive ?
+              <>
+                <button type="button" className="profile__form-submit-btn">Сохранить</button>
+              </>
+              :
+              <>
+                <button className="profile__form-btn profile__form-btn_edit" onClick={handleActive}>Редактировать</button>
+                <button className="profile__form-btn profile__form-btn_exit">Выйти из аккаунта</button>
+              </>
+          }
+
         </form>
       </section>
     </>

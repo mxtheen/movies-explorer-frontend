@@ -22,6 +22,7 @@
 .profile__form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 118px auto 0;
 }
 
@@ -83,6 +84,20 @@
   background-color: #202020;
   margin: 0;
   padding: 0;
+  width: max-content;
+}
+.profile__form-submit-btn {
+  border: none;
+  background-color: #4285F4;
+  color: #fff;
+  border-radius: 3px;
+  margin: 20px auto 0;
+  padding: 15px 0;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  transition: .1s ease;
 }
 
 .profile__form-btn_edit {
@@ -93,8 +108,15 @@
   margin-top: 16px;
   color: #EE3465;
 }
-
-.profile__btn:hover {
+.profile__form-submit-btn:disabled {
+  background: #F8F8F8;
+  cursor: not-allowed;
+  color: #C2C2C2;
+}
+.profile__form-submit-btn:disabled:hover{
+  opacity: 100%;
+}
+.profile__btn:hover, .profile__form-submit-btn:hover {
   opacity: 70%;
 }
 

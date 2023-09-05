@@ -13,9 +13,9 @@ function BurgerMenu({ isLoggedIn }) {
     <>
       {isLoggedIn ?
         <>
-          <div className={`burger ${isActive ? 'burger_active' : ""}`} onClick={handleActive}>
+          <button className={`burger ${isActive ? 'burger_active' : ""}`} onClick={handleActive}>
             <span className="burger__visible"></span>
-          </div>
+          </button>
           <div className={`burger__sidebar ${isActive ? 'burger__sidebar_active' : ""}`} >
             <ul className="burger__list">
               <li className="burger__list-item">

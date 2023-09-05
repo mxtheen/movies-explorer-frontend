@@ -6,8 +6,10 @@ function SavedMovies({ isLoggedIn }) {
   return (
     <>
       <Header isLoggedIn={isLoggedIn}></Header>
-      <SearchForm></SearchForm>
-      <MoviesCardList></MoviesCardList>
+      <main className="main">
+        <SearchForm></SearchForm>
+        <MoviesCardList></MoviesCardList>
+      </main>
       <Footer></Footer>
     </>
 

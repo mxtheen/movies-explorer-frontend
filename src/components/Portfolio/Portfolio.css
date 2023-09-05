@@ -66,6 +66,7 @@
 .portfolio__link:hover {
   opacity: 70%;
 }
+
 @media (max-width: 768px) {
   .portfolio {
     max-width: 668px;
@@ -74,18 +75,22 @@
     margin-right: 50px;
     padding-bottom: 90px;
   }
+
   .portfolio__header {
     max-width: 668px;
     line-height: 18px;
   }
+
   .portfolio__list {
     max-width: 668px;
   }
+
   .portfolio__list-item {
     font-size: 28px;
     line-height: 50px;
   }
 }
+
 @media (max-width:400px) {
   .portfolio {
     margin-top: 70px;
@@ -93,15 +98,22 @@
     margin-right: 14px;
     padding-bottom: 70px;
   }
+
   .portfolio__header {
     font-size: 14px;
     line-height: 20px;
   }
+
   .portfolio__list {
     margin-top: 40px;
   }
+
   .portfolio__list-item {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .portfolio__link-image {
+    width: 11px;
   }
 }
