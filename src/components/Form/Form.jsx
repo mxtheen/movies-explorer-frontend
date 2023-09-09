@@ -4,11 +4,12 @@
       <section className="auth">
         <div className="auth__container">
           <Link to="/" className='auth__link'></Link>
-          <form className="form">
+          <form className="form" noValidate onSubmit={props.onSubmit}>
             <h2 className="form__greetings">{props.header}</h2>
             <div className="form__body">
               {props.children}
             </div>
+            <p className="form__error-submit"></p>
             <button type="submit" className="form__submit-btn">{props.button}</button>
             <div className="form__container">
               <p className="form__caption">{props.caption}</p>

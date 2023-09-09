@@ -3,13 +3,13 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 
-function Movies({ isLoggedIn }) {
+function Movies({ isLoggedIn, movies }) {
   return (
     <>
       <Header isLoggedIn={isLoggedIn}></Header>
       <main className='main'>
         <SearchForm></SearchForm>
-        <MoviesCardList></MoviesCardList>
+        <MoviesCardList movies={movies}></MoviesCardList>
       </main>
       <Footer></Footer>
     </>
