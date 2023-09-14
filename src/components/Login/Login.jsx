@@ -5,8 +5,14 @@ import Form from "../Form/Form";
 import { useFormWithValidation } from "../../utils/Hooks/useForm";
 
 function Login({ onLogin, isSucces, errMessage }) {
-  const { values, handleChange, errors, isValid } = useFormWithValidation();
-
+  const { values, handleChange, errors } = useFormWithValidation();
+  const myError = { ...errors };
+  const disableBtn = () => {
+    if (errors.email !== "" || errors.password !== "") {
+      return true;
+    }
+  };
+  console.log(myError);
   const handleSumbit = (e) => {
     e.preventDefault();
     onLogin(values.email, values.password);
@@ -20,9 +26,9 @@ function Login({ onLogin, isSucces, errMessage }) {
         text={"Регистрация"}
         link={"/signup"}
         onSubmit={handleSumbit}
-        isDisabled={!isValid}
         errMessage={errMessage}
         isSucces={isSucces}
+        isDisabled={disableBtn()}
       >
         <label htmlFor="email" className="form__label">
           E-mail

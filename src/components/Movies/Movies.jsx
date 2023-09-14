@@ -12,7 +12,6 @@ function Movies({ setValue, onDelete }) {
 
   function getWindowSize() {
     const { innerWidth } = window;
-
     if (innerWidth < 768) {
       setFilmsCount(5);
     } else if (innerWidth < 1271) {
@@ -70,7 +69,10 @@ function Movies({ setValue, onDelete }) {
         localStorage.setItem("moviesCopy", JSON.stringify(data));
         localStorage.setItem("storedMovies", JSON.stringify(updatedData));
         setError(false);
-        setFilmsCount(filmsCount);
+        const updatedFilmsCount =
+          windowSize < 768 ? 5 : windowSize < 1271 ? 8 : 12;
+        setFilmsCount(updatedFilmsCount);
+        setFilmsCount(updatedFilmsCount);
         setFirstSubmit(true);
       })
       .catch((err) => {
@@ -111,10 +113,15 @@ function Movies({ setValue, onDelete }) {
       const updatedData = fliterData(moviesCopy, inputValue);
       setMovies(updatedData);
       localStorage.setItem("storedMovies", JSON.stringify(updatedData));
+      const updatedFilmsCount =
+        windowSize < 768 ? 5 : windowSize < 1271 ? 8 : 12;
+      setFilmsCount(updatedFilmsCount);
+      console.log(updatedFilmsCount);
     } else {
       handleInitialMovies();
     }
   };
+
   const addMoreFilms = () => {
     let countToPlus = 3;
     if (windowSize < 1271) {

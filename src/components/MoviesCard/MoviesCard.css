@@ -21,7 +21,6 @@
   z-index: 1;
   top: 14px;
   right: 14px;
-  transform: translateX(200%);
 }
 
 .movie:hover .movie__button {
@@ -42,6 +41,7 @@
   background: #313131;
   padding: 6px 0;
   width: 72px;
+  transform: translateX(200%);
 }
 
 .movie__button_active {

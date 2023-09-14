@@ -61,10 +61,10 @@ function App() {
   };
 
   const handleRegister = (name, email, password) => {
+    setErrMessage("");
     api
       .register(name, email, password)
-      .then((data) => {
-        setErrMessage("");
+      .then(() => {
         setSucces(true);
         handleLogin(email, password);
       })
@@ -76,6 +76,7 @@ function App() {
   };
 
   const handleLogin = (email, password) => {
+    setErrMessage("");
     api
       .login(email, password)
       .then((data) => {

@@ -5,7 +5,11 @@ import { useFormWithValidation } from "../../utils/Hooks/useForm";
 
 function Register({ onRegister, isSucces, errMessage }) {
   const { values, handleChange, errors, isValid } = useFormWithValidation();
-
+  const disableBtn = () => {
+    if (errors.name !== "" || errors.email !== "" || errors.password !== "") {
+      return true;
+    }
+  };
   function handleSubmit(e) {
     e.preventDefault();
     onRegister(values.name, values.email, values.password);
@@ -20,7 +24,7 @@ function Register({ onRegister, isSucces, errMessage }) {
         text={"Войти"}
         link={"/signin"}
         onSubmit={handleSubmit}
-        isDisabled={!isValid}
+        isDisabled={disableBtn()}
         errMessage={errMessage}
         isSucces={isSucces}
       >

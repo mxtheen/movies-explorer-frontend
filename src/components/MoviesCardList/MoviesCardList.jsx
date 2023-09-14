@@ -22,7 +22,6 @@ function MoviesCardList({
             <p className="movies__message">{messages.error.internalMessage}</p>
           </div>
         )}
-
         {movies.length > 0
           ? movies.map((movie) => (
               <MoviesCard

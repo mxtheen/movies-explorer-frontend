@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function BurgerMenu({ isLoggedIn }) {
   const [isActive, setActive] = React.useState(false);
@@ -30,19 +30,19 @@ function BurgerMenu({ isLoggedIn }) {
           >
             <ul className="burger__list">
               <li className="burger__list-item">
-                <Link className="burger__list-link" to="/">
+                <NavLink className="burger__list-link" to="/">
                   Главная
-                </Link>
+                </NavLink>
               </li>
               <li className="burger__list-item">
-                <Link className="burger__list-link" to="/movies">
+                <NavLink className="burger__list-link" to="/movies">
                   Фильмы
-                </Link>
+                </NavLink>
               </li>
               <li className="burger__list-item">
-                <Link className="burger__list-link" to="/saved-movies">
+                <NavLink className="burger__list-link" to="/saved-movies">
                   Сохранённые фильмы
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <Link className="burger__link" to="/profile">

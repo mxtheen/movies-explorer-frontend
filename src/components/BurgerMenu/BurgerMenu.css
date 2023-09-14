@@ -6,7 +6,7 @@
   display: none;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .burger {
     background: #202020;
     border: none;
@@ -18,7 +18,7 @@
     width: 28px;
     height: 24px;
     cursor: pointer;
-    transition: opacity .1s ease;
+    transition: opacity 0.1s ease;
     margin: 0;
     padding: 0;
   }
@@ -29,16 +29,16 @@
     height: 3px;
     width: 100%;
     transform: scale(1);
-    background-color: #FAF6F2;
+    background-color: #faf6f2;
   }
 
   .burger::before,
   .burger::after {
-    content: '';
+    content: "";
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #FAF6F2;
+    background-color: #faf6f2;
     transition: all 0.3s ease 0s;
   }
 
@@ -51,7 +51,7 @@
   }
 
   .burger_active .burger__visible {
-    transform: scale(0)
+    transform: scale(0);
   }
 
   .burger_active::before {
@@ -101,7 +101,7 @@
   }
 
   .burger__list-link {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -109,7 +109,7 @@
     font-weight: 500;
     line-height: normal;
     cursor: pointer;
-    transition: .1s ease;
+    transition: 0.1s ease;
   }
 
   .burger__link {
@@ -117,21 +117,25 @@
     background-color: #313131;
     border-radius: 20px;
     width: 100px;
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
     line-height: normal;
     cursor: pointer;
-    transition: .1s ease;
+    transition: 0.1s ease;
   }
-  .burger__link:hover, .burger__list-link:hover {
+  .active {
+    text-decoration: underline;
+  }
+  .burger__link:hover,
+  .burger__list-link:hover {
     opacity: 70%;
   }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .burger {
     width: 22px;
     height: 20px;
@@ -142,7 +146,7 @@
   }
   .burger__visible,
   .burger::before,
-  .burger::after  {
+  .burger::after {
     height: 2.5px;
   }
   .burger__sidebar {
@@ -152,6 +156,6 @@
     padding-bottom: 46px;
   }
   .burger__list {
-    gap:24px
+    gap: 24px;
   }
 }

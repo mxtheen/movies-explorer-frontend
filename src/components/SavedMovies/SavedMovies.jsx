@@ -41,7 +41,6 @@ function SavedMovies({ onDelete }) {
 
   return (
     <main className="main">
-      <h1>{savedMovies.length}</h1>
       <SearchForm
         onSubmit={handleFirstSubmit}
         handleCheckboxChange={handleCheckboxChange}
