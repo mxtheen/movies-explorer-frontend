@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { MovieContext } from "../../utils/contexts/SavedMovieContext";
 
 function SearchForm({ onSubmit, handleCheckboxChange }) {
-  const { values, handleChange, errors, isValid } = useFormWithValidation();
+  const { handleChange, errors, isValid } = useFormWithValidation();
   const { pathname } = useLocation();
   const { savedMovies } = useContext(MovieContext);
   const [isChecked, setIsChecked] = useState(
