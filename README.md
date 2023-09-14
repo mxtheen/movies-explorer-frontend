@@ -18,4 +18,4 @@ Movies Explorer - дипломная работа по специальност�
 
 Ссылка на адрес frontend части: https://mxtheem-movies.nomoreparties.co
 
-Ссылка на пулл-реквест работыЖ https://github.com/mxtheen/movies-explorer-frontend/pull/3
+Ссылка на пулл-реквест работы: https://github.com/mxtheen/movies-explorer-frontend/pull/3
