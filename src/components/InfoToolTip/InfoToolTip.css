@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: end;
   align-items: end;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -12,7 +12,7 @@
   height: 90%;
   visibility: hidden;
   z-index: -1;
-  transition: visibility 0s, transform .1s;
+  transition: visibility 0s, transform 0.1s;
   transform: translateX(200%);
 }
 .popup_active {
@@ -21,12 +21,11 @@
 }
 .popup__content {
   width: 250px;
-  height: 70px;
+  min-height: 70px;
   background: #fff;
   color: #000;
   border-radius: 8px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   position: relative;
@@ -36,11 +35,11 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   border: none;
   cursor: pointer;
-  transition: opacity .1s ease;
+  transition: opacity 0.1s ease;
 }
 .popup__close:hover {
   opacity: 70%;
@@ -49,4 +48,5 @@
   font-size: 16px;
   line-height: 1.21;
   font-weight: 500;
+  width: 210px;
 }

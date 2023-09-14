@@ -16,7 +16,7 @@
 
 .movie__button {
   cursor: pointer;
-  transition: visibility 0s, transform .1s;
+  transition: visibility 0s, transform 0.1s;
   position: absolute;
   z-index: 1;
   top: 14px;
@@ -33,7 +33,7 @@
 }
 
 .movie__button_inactive {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 10px;
   line-height: 9px;
@@ -50,7 +50,7 @@
   width: 21px;
   height: 21px;
 }
-.movie__button_active-cross{
+.movie__button_active-cross {
   background: url(../../images/cross__button.svg) no-repeat center;
   border: none;
   width: 21px;
@@ -70,7 +70,7 @@
 .movie__title {
   margin: 0;
   padding: 0;
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   font-size: 13px;
   width: 200px;
@@ -81,18 +81,18 @@
 }
 
 .movie__dutarion {
-  color: #8B8B8B;
+  color: #8b8b8b;
   text-align: center;
   font-size: 11px;
   line-height: 10px;
   border-radius: 3px;
-  background: #2F2F2F;
+  background: #2f2f2f;
   width: 52px;
   margin: 0;
   padding: 3px 0;
 }
 
-@media (max-width:890px) {
+@media (max-width: 890px) {
   .movie {
     width: 339px;
   }
@@ -107,8 +107,13 @@
     padding-right: 0px;
   }
 }
+@media (max-width: 767px) {
+  .movie__button {
+    transform: translateX(0);
+  }
+}
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .movie {
     width: 300px;
     min-height: 200px;

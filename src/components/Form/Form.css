@@ -115,11 +115,17 @@
   cursor: pointer;
   transition: .1s ease;
 }
+.form__submit-btn:hover {
+  opacity: 70%;
+}
 .form__submit-btn:disabled {
   cursor: not-allowed;
   background-color: #F8F8F8;
   color: #C2C2C2;
+  transition: none;
+  opacity: 100%;
 }
+
 .form__container {
   display: flex;
   flex-direction: row;
@@ -149,8 +155,7 @@
   transition: .1s ease;
 }
 
-.form__link:hover,
-.form__submit-btn:hover {
+.form__link:hover {
   opacity: 70%;
 }
 
