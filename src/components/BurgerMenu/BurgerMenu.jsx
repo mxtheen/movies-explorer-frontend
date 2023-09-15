@@ -1,9 +1,13 @@
-import React from "react"
-import { Link } from "react-router-dom";
-
+import React, { useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function BurgerMenu({ isLoggedIn }) {
   const [isActive, setActive] = React.useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setActive(false);
+  }, [location]);
 
   const handleActive = () => {
     setActive((prevActive) => !prevActive);
@@ -11,29 +15,45 @@ function BurgerMenu({ isLoggedIn }) {
 
   return (
     <>
-      {isLoggedIn ?
+      {isLoggedIn ? (
         <>
-          <button className={`burger ${isActive ? 'burger_active' : ""}`} onClick={handleActive}>
+          <button
+            className={`burger ${isActive ? "burger_active" : ""}`}
+            onClick={handleActive}
+          >
             <span className="burger__visible"></span>
           </button>
-          <div className={`burger__sidebar ${isActive ? 'burger__sidebar_active' : ""}`} >
+          <div
+            className={`burger__sidebar ${
+              isActive ? "burger__sidebar_active" : ""
+            }`}
+          >
             <ul className="burger__list">
               <li className="burger__list-item">
-                <Link className="burger__list-link" to="/">Главная</Link>
+                <NavLink className="burger__list-link" to="/">
+                  Главная
+                </NavLink>
               </li>
               <li className="burger__list-item">
-                <Link className="burger__list-link" to="/movies">Фильмы</Link>
+                <NavLink className="burger__list-link" to="/movies">
+                  Фильмы
+                </NavLink>
               </li>
               <li className="burger__list-item">
-                <Link className="burger__list-link" to="/saved-movies">Сохранённые фильмы</Link>
+                <NavLink className="burger__list-link" to="/saved-movies">
+                  Сохранённые фильмы
+                </NavLink>
               </li>
             </ul>
-            <Link className="burger__link" to="/profile">Аккаунт</Link>
+            <Link className="burger__link" to="/profile">
+              Аккаунт
+            </Link>
           </div>
         </>
-        :
-        <></>}
+      ) : (
+        <></>
+      )}
     </>
   );
 }
-export default BurgerMenu
+export default BurgerMenu;

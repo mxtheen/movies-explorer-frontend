@@ -5,10 +5,11 @@
   width: 100%;
   height: 626px;
   padding-top: 74px;
+  z-index: -1;
 }
 
 .profile__greetings {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Inter;
   font-size: 24px;
@@ -58,29 +59,38 @@
 }
 
 .profile__form-input::placeholder {
-  color: #8B8B8B;
+  color: #8b8b8b;
   text-align: right;
   font-size: 11px;
 }
-
+.profile__form-input:disabled {
+  cursor: not-allowed;
+}
 .profile__form-label {
-  color: #FFF;
+  color: #fff;
   font-size: 11px;
   font-style: normal;
   font-weight: 500;
   width: 141px;
   text-align: left;
 }
-
+.profile__form-containter-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 220px auto 0;
+}
 .profile__form-btn {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   border: none;
   cursor: pointer;
-  transition: .1s ease;
+  transition: 0.1s ease;
   background-color: #202020;
   margin: 0;
   padding: 0;
@@ -88,7 +98,7 @@
 }
 .profile__form-submit-btn {
   border: none;
-  background-color: #4285F4;
+  background-color: #4285f4;
   color: #fff;
   border-radius: 3px;
   margin: 20px auto 0;
@@ -97,7 +107,7 @@
   text-align: center;
   width: 100%;
   cursor: pointer;
-  transition: .1s ease;
+  transition: 0.1s ease;
 }
 
 .profile__form-btn_edit {
@@ -106,30 +116,34 @@
 
 .profile__form-btn_exit {
   margin-top: 16px;
-  color: #EE3465;
+  color: #ee3465;
 }
 .profile__form-submit-btn:disabled {
-  background: #F8F8F8;
+  background: #f8f8f8;
   cursor: not-allowed;
-  color: #C2C2C2;
+  color: #c2c2c2;
 }
-.profile__form-submit-btn:disabled:hover{
+.profile__form-submit-btn:disabled:hover {
   opacity: 100%;
 }
-.profile__btn:hover, .profile__form-submit-btn:hover {
+.profile__form-btn:hover,
+.profile__form-submit-btn:hover {
   opacity: 70%;
 }
 
-.profile__error {
-  color: #FF004C;
+.profile__message {
+  color: #ff004c;
   text-align: center;
   font-size: 11px;
   line-height: normal;
   min-height: 14px;
   margin-top: 176px;
 }
+.profile__message_succ {
+  color: #32cd32;
+}
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .profile {
     height: 950px;
     padding-top: 236px;
@@ -147,7 +161,7 @@
   }
 }
 
-@media (max-width:440px) {
+@media (max-width: 440px) {
   .profile {
     height: 706px;
     padding-top: 70px;

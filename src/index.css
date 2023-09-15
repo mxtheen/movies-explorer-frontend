@@ -13,8 +13,7 @@
 @import url(../src/components/Profile/Profile.css);
 @import url(../src/components/Form/Form.css);
 @import url(../src/components/SearchForm/SearchForm.css);
-@import url(../src/components/FilterCheckbox/FilterCheckbox.css);
 @import url(../src/components/MoviesCardList/MoviesCardList.css);
 @import url(../src/components/MoviesCard/MoviesCard.css);
-@import url(../src/components/SavedMovies/SavedMovies.css);
 @import url(../src/components/BurgerMenu/BurgerMenu.css);
+@import url(../src/components/InfoToolTip/InfoToolTip.css);
